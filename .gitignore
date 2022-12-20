@@ -3,3 +3,5 @@ __pycache__
 .vscode
 db.sqlite3
 .env
+
+# postgresql://postgres:p8fFyHRTCOtUDve7gBOD@containers-us-west-49.railway.app:5707/railway

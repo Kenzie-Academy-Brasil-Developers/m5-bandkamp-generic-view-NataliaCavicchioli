@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from albums.serializers import AlbumSerializer
 from .models import Song
+import ipdb
 
 
 class SongSerializerOld(serializers.Serializer):
@@ -20,8 +21,8 @@ class SongSerializer(serializers.ModelSerializer):
 
 
 class DetailedSongSerializer(serializers.ModelSerializer):
-    album = AlbumSerializer(read_only=True)
-
     class Meta:
         model = Song
-        fields = ["id", "title", "duration", "album"]
+        fields = ["id", "title", "duration", "album_id"]
+
+    # ipdb.set_trace()
